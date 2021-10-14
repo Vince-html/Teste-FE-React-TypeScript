@@ -21,4 +21,8 @@ Executar o comando **yarn** para instalação das dependências
 
 ### yarn start 
 
-Para iniciar o projeto , não esquecer de executar **yarn server** para executar a fakeApi.
+Para iniciar o projeto , não esquecer de executar **yarn server** para executar a fakeApi.<br>
+
+## Resultado
+
+![imagemdemonstração](./src/assets/imagemrl.jpg)
