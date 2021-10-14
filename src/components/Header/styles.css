@@ -1,0 +1,24 @@
+.navbar-react {
+  background-color: #007acc;
+  padding: 0;
+  display: grid;
+  color: #fff;
+  grid-template-columns: 4vw 65vw 22vw 9vw;
+  align-items: center;
+  max-height: fit-content;
+}
+
+.logo-react {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.navbar-item-1 {
+  grid-column: 1 / 2;
+}
+
+.navbar-item-2 {
+  grid-column: 2 / 2;
+  display: flex;
+  padding-left: 2rem;
+}

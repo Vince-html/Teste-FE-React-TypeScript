@@ -1,0 +1,25 @@
+.table-service {
+  margin: 16px;
+  width: -webkit-fill-available;
+  
+  border-radius: 10px; 
+  border-spacing: 0;
+
+}
+
+.th-service {
+  text-align: center;
+  background-color: #F0F0F0;
+  border: 0.5px solid #ddd;
+  padding: 10px 10px;
+  
+}
+
+.th-service:first-child{
+  border-radius: 10px 0 0 0;
+}
+
+.th-service:last-child{
+  border-radius: 0 10px 0 0;
+}
+

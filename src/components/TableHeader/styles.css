@@ -1,0 +1,14 @@
+.main-summary {
+  margin-top: 16px;
+  width: 100%;
+  border: 1px solid #B7B7B7;
+  border-radius: 10px;
+  
+}
+
+.header-summary {
+  background-color: #F0F0F0;
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
+  margin: 0;
+}

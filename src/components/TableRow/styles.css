@@ -1,0 +1,13 @@
+.td-service {
+  border: 0.5px solid #ddd;
+  text-align: center;
+  padding: 10px 10px;
+  }
+
+.input-table-row {
+  margin:  auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
