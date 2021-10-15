@@ -2,22 +2,31 @@ import React from 'react';
 import { DataJsonProps, useData } from '../../Context/DataContext';
 import { TableHeader } from '../TableHeader';
 import { TableRow } from '../TableRow';
+import ThService from '../ThService';
 import './styles.css';
+
+const category = [
+  { type: 'select', title: 'Select' },
+  { type: 'hostname', title: 'Hostname' },
+  { type: 'memoryProvisioned', title: 'Memória' },
+  { type: 'cpuProvisioned', title: 'vCPUs' },
+  { type: 'totalDiskGB', title: 'Disco' },
+  { type: 'ip', title: 'IP' },
+];
 
 export function TableService() {
   const { dataJson } = useData();
+
+
 
   return (
     <TableHeader title='Tabela de servidores'>
       <table className='table-service'>
         <thead>
           <tr className='main-summary'>
-            <th className='th-service'>Select</th>
-            <th className='th-service'>Hostname</th>
-            <th className='th-service'>Memória</th>
-            <th className='th-service'>vCPUs</th>
-            <th className='th-service'>Disco</th>
-            <th className='th-service'>IP</th>
+            {category.map((item) => (
+              <ThService item={item} key={item.type} />
+            ))}
           </tr>
         </thead>
         <tbody className='tb-service'>

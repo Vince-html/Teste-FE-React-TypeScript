@@ -34,6 +34,7 @@ interface DataContextProps {
   dataJson: DataJsonProps[] | undefined;
   CalcSummary: (itemId: number) => Promise<void>;
   summaryData: SummaryProps;
+  OrderColumnService: (type: string) => void;
 }
 
 
@@ -98,6 +99,51 @@ const DataProvider = ({ children }: DataProviderProps) => {
     getData();
   }, []);
 
+  function OrderColumnService(type: string) {
+    if (type === 'memoryProvisioned') {
+      const orderList = dataJson
+        .sort(
+          (a, b) =>
+            a.configuracao.memoryProvisioned - b.configuracao.memoryProvisioned
+        )
+        .map((item) => {
+          return item;
+        });
+      setDataJson(orderList);
+    }
+    if (type === 'cpuProvisioned') {
+      const orderList = dataJson
+        .sort(
+          (a, b) =>
+            a.configuracao.cpuProvisioned - b.configuracao.cpuProvisioned
+        )
+        .map((item) => {
+          return item;
+        });
+      setDataJson(orderList);
+    }
+    if (type === 'totalDiskGB') {
+      const orderList = dataJson
+        .sort((a, b) => a.configuracao.totalDiskGB - b.configuracao.totalDiskGB)
+        .map((item) => {
+          return item;
+        });
+      setDataJson(orderList);
+    }
+    if (type === 'hostname') {
+      const orderName = dataJson
+        .sort(function (a, b) {
+          return +(a.hostname > b.hostname) || +(a.hostname === b.hostname) - 1;
+        })
+        .map((item) => {
+          return item;
+        });
+
+      setDataJson(orderName);
+    }
+  }
+
+
   const CalcSummary = async (itemId: number) => {
     const selectItem = dataJson.map((item: DataJsonProps) =>
       item.id_vm === itemId
@@ -117,6 +163,7 @@ const DataProvider = ({ children }: DataProviderProps) => {
         dataJson,
         CalcSummary,
         summaryData,
+        OrderColumnService,
       }}
     >
       {children}
