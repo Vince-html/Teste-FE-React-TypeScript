@@ -15,9 +15,10 @@ export function ButtonStyles() {
     },
 
     button: {
+      fontWeight: theme.fontWeight.regular,
       fontSize: theme.fontSize.small,
       color: theme.colors.secondary500,
-      backgroundColor: theme.colors.primary500,
+      backgroundColor: theme.colors.text500,
       minWidth: '150px',
       border: 'none',
       padding: '5px 10px',

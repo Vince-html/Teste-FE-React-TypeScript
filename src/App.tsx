@@ -2,12 +2,15 @@ import { ThemeProvider } from '@mui/material';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { DataProvider } from './Context/DataContext';
+import { style } from './Global';
+import { useStyles } from './hooks/useStyles';
 import AppRoutes from './routes';
 import { theme } from './styles/theme/theme';
 
 
 
 const App = () => {
+  useStyles(style);
   return (
     <DataProvider>
       <ThemeProvider theme={theme} >
