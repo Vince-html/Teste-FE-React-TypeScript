@@ -1,4 +1,4 @@
-import { CustomTheme, useTheme } from '@mui/material';
+import { useTheme } from '@mui/material';
 import { useStyles } from '../../hooks/useStyles';
 
 type ComponentClasses = {
@@ -7,7 +7,7 @@ type ComponentClasses = {
 };
 
 export function ButtonStyles() {
-  const theme: CustomTheme = useTheme();
+  const theme = useTheme();
 
   const classes: ComponentClasses = useStyles({
     ca: {
