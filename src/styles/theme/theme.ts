@@ -1,4 +1,5 @@
-import { createTheme, Theme } from '@mui/material';
+import { Theme } from '@mui/material';
+import { createTheme } from '@mui/material/styles';
 
 declare module '@mui/material' {
   export interface CustomThemeOptions {
