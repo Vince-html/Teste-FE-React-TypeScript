@@ -1,6 +1,6 @@
 import { FormControlProps, FormHelperText, InputLabel, Select } from '@mui/material';
 import { ChangeEvent, ReactNode } from 'react';
-import { CustomFormControl } from '../style';
+import { CustomFormControl } from './styles';
 
 interface SelectComponentProps extends FormControlProps {
   /**

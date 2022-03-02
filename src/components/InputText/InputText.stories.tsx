@@ -20,7 +20,7 @@ export default {
 
 export const Template: ComponentStory<typeof InputText> = (args) => {
   const [localValue, setValue] = useState({
-    title: 'Placeholder',
+    title: '',
   });
   console.log(localValue)
   const onChangeInput = (e: ChangeEvent<HTMLInputElement>) => {

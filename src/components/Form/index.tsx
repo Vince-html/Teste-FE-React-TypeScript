@@ -1,6 +1,5 @@
 import { useFormik } from 'formik';
-import React from 'react'
-import { InputText } from '../InputText';
+
 import * as Yup from 'yup';
 import { SelectComponent } from '../Modelos/BaseModal/SelectComponent';
 import { MenuItem } from '@mui/material';
@@ -41,9 +40,7 @@ export function FormComponent() {
 
   return (
     <>
-      {/* <InputText name="title" label="Title" value={formik.values} errors={formik.errors} touched={formik.touched} handleChange={formik.handleChange} />
-      <InputText name="age" label="age" value={formik.values} errors={formik.errors} touched={formik.touched} handleChange={formik.handleChange} />
-      <InputText name="name" label="Name" value={formik.values} errors={formik.errors} touched={formik.touched} handleChange={formik.handleChange} /> */}
+
       <SelectComponent
 
         name="name"
